@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         mXListViewAdapter.addHeaderDatas(headDatas);
                         mXListView.stopRefresh();
+                        mXListView.setHasLoadMore(false);
                     }
                 }, 3000);
             }

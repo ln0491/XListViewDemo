@@ -210,7 +210,7 @@ public class XListView extends ListView implements AbsListView.OnScrollListener,
                 float moveY = ev.getRawY();
                 int diffX = (int) (moveX - mDownX + .5f);
 
-                if(mDownX == 0 && mDownY == 0) {//拖动开始的地方是小ViewPager
+                if(mDownX == 0 && mDownY == 0) {//拖动开始的地方是
                     mDownX = moveX;
                     mDownY = moveY;
                 }
