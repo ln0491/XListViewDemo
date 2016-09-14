@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/refreshHeader_rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#ccc" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp" >
+
+            <!-- pb -->
+
+            <ProgressBar
+                android:visibility="invisible"
+                android:id="@+id/refreshHeader_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+            <!-- arrow -->
+
+            <ImageView
+                android:id="@+id/refreshHeader_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:src="@mipmap/common_listview_headview_red_arrow" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <!-- 下拉刷新的状态 -->
+
+            <TextView
+                android:id="@+id/refreshHeader_tv_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="下拉刷新"
+                android:textColor="#f00"
+                android:textSize="18sp" />
+            <!-- 更新时间 -->
+
+            <TextView
+                android:id="@+id/refreshHeader_tv_updatetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="刷新时间:"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 添加一个容器,放置自定义的头布局 -->
+
+    <FrameLayout
+        android:id="@+id/refreshHeader_fl_customHeaderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+</LinearLayout>
