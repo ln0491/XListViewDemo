@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         mXListViewAdapter.addHeaderDatas(headDatas);
                         mXListView.stopRefresh();
-                        mXListView.setHasLoadMore(false);
+
                     }
                 }, 3000);
             }
@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                         mXListViewAdapter.addFooterDatas(footerDatas);
 
                        mXListView.stopLoadMore(true);
+                        //没有加载更多
+                       // mXListView.setHasLoadMore(false);
                     }
                 }, 3000);
             }
